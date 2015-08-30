@@ -1,0 +1,15 @@
+default: &default
+    adapter: mysql2
+    encoding: utf8
+    username: root
+    password: password
+
+development:
+  <<: *default
+  database: up_work_test_development
+
+
+
+production:
+  <<: *default
+  database: up_work_test_staging

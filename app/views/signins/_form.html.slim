@@ -1,0 +1,22 @@
+.object_comment_form
+  = form_for Signin.new,url: signins_path,html: {remote: true} do |f|
+    - if @signin.errors.any?
+      #error_explanation
+        h2
+          = pluralize(@signin.errors.count, "error")
+          | prohibited this signin from being saved
+
+        ul
+          - @signin.errors.full_messages.each do |message|
+            li
+              = message
+
+
+    .field
+      = f.label :url
+      br
+      = f.text_field :url
+
+    .actions
+      = f.submit
+
