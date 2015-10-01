@@ -1,0 +1,5 @@
+<% if @book_mark.destroyed?%>
+    $("#book_mark_<%=@book_mark.id%>").fadeOut(1000, function(){
+        $(this).remove();
+    });
+<% end %>

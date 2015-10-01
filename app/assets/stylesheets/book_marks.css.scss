@@ -55,6 +55,37 @@
     }
   }
 }
-.object_signins{
-margin: 50px 0 0 200px;
+.object_book_marks{
+  margin: 50px 0 0 200px;
+}
+
+
+.container-list{
+  padding: 15px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.container-list .record {
+  padding: 10px;
+  background-color: #F0F0F0;
+  margin-bottom: 10px;
+}
+
+.load-more {
+  background-color: #000;
+  padding: 15px;
+  color: #fff;
+}
+
+.load-more-container{
+  @extend .container;
+  text-align: center;
+}
+
+.del{
+  float: right;
+  input{
+    width: 20px;
+  }
 }

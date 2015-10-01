@@ -1,7 +1,0 @@
-<% if @signin.id.present? %>
-	$('.object_signins').prepend($("<%= escape_javascript render(partial: "signin", locals: {signin: @signin}) %>").hide().fadeIn(1000));
-	$('#signin_url').val("");
-<% else %>
-	alert("Please Enter Valid URL");
-	$('#signin_url').val("");
-<% end %>

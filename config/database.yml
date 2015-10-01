@@ -7,27 +7,27 @@ default: &default
 
 development:
   <<: *default
-  database: bookmarkd_development
+  database: bookmark_development
   host: localhost
   username: postgres
   password: password
 
 test:
   <<: *default
-  database: bookmarkt_test
+  database: bookmark_test
   host: localhost
   username: postgres
   password: password
 
 production:
   <<: *default
-  database: bookmarkp_production
+  database: bookmark_production
   username: postgres
   password: password
 
 staging:
   <<: *default
-  database: bookmarks_de1velopment
+  database: bookmark_de1velopment
   host: localhost
   username: postgres
   password: password

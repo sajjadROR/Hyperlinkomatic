@@ -1,0 +1,11 @@
+.record id="book_mark_#{book_mark.id}"
+  p
+    b
+      - title = book_mark.title
+      - title = title[/(.*)\s/,1]
+      = link_to title, book_mark.link_path, target: '_blank'
+      span.del
+        = text_field_tag :delete, '', 'data-load-event-url' => book_mark_path(book_mark)
+
+      br
+    = book_mark.link_path

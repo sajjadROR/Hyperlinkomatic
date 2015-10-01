@@ -1,0 +1,24 @@
+.object_book_mark_form
+  .container
+    .heading
+      h2
+        | Book Mark
+    = form_for BookMark.new, url: book_marks_path, html: {remote: true} do |f|
+
+      .field
+        = f.label :link_path, class: 'label'
+        br
+        = f.text_field :link_path, placeholder: 'e.g. https://www.sajjadmurtaza.com'
+
+      .field
+        = f.label :title, class: 'label'
+        br
+        = f.text_field :title, placeholder: 'e.g. Sajjad Murtaza'
+
+      .actions
+        = f.submit
+
+  .object_book_marks.container-list
+
+    - @book_marks.each do |book_mark|
+      = render partial: 'book_marks/book_mark', locals: {book_mark: book_mark}

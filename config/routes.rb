@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  resources :signins
+  resources :book_marks
 
-
-  root 'signins#index'
-
-
+  root 'book_marks#index'
 end

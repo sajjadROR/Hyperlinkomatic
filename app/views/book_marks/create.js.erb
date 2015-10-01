@@ -1,0 +1,9 @@
+<% if @book_mark.id.present? %>
+	$('.object_book_marks').prepend($("<%= escape_javascript render(partial: "book_mark", locals: {book_mark: @book_mark}) %>").hide().fadeIn(1000));
+	$('#book_mark_link_path').val("");
+    $('#book_mark_title').val("");
+<% else %>
+	alert("Sorry dude you can't, Its only for Admin ");
+	$('#book_mark_link_path').val("");
+    $('#book_mark_title').val("");
+<% end %>
