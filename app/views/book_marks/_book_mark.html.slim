@@ -5,7 +5,8 @@
       - title = title[/(.*)\s/,1]
       = link_to title, book_mark.link_path, target: '_blank'
       span.del
-        = text_field_tag :delete, '', 'data-load-event-url' => book_mark_path(book_mark)
+        = text_field_tag :delete, '', 'data-load-event-url' => book_mark_path(book_mark), placeholder: "#{index}"
 
       br
     = book_mark.link_path
+    hr

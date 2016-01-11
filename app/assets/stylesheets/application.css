@@ -15,3 +15,9 @@
  */
 
 
+input{
+    height: 45px;
+    border-radius: 8px;
+    border-bottom-style: outset;
+    border-right-style: outset;
+}

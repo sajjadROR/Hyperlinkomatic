@@ -20,5 +20,5 @@
 
   .object_book_marks.container-list
 
-    - @book_marks.each do |book_mark|
-      = render partial: 'book_marks/book_mark', locals: {book_mark: book_mark}
+    - @book_marks.each_with_index do |book_mark, index|
+      = render partial: 'book_marks/book_mark', locals: {book_mark: book_mark, index: index+1}
