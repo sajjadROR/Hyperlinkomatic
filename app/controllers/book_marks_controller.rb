@@ -2,7 +2,7 @@ class BookMarksController < ApplicationController
   before_action :set_book_mark, only: [:destroy]
 
   def index
-    @book_marks = BookMark.all
+    @book_marks = BookMark.all.order('title asc')
   end
 
 
