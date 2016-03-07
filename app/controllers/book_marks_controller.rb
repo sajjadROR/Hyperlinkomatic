@@ -1,5 +1,5 @@
 class BookMarksController < ApplicationController
-  before_action :set_book_mark, only: [:destroy]
+  before_action :set_book_mark, only: [:destroy, :edit, :update]
 
   def index
     @book_marks = BookMark.all.order('title asc')
@@ -11,6 +11,14 @@ class BookMarksController < ApplicationController
     if @book_mark.title.split(/\s+/).last == "+"
       @book_mark.save
     end
+  end
+
+  def edit
+
+  end
+
+  def update
+    @book_mark.update(book_mark_params)
   end
 
   def destroy
@@ -25,7 +33,7 @@ class BookMarksController < ApplicationController
     end
 
     def book_mark_params
-      params.require(:book_mark).permit(:title, :link_path)
+      params.require(:book_mark).permit(:title, :link_path, :description)
     end
 
 end

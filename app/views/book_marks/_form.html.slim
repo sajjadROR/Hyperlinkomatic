@@ -1,0 +1,19 @@
+= form_for @book_mark, html: {remote: true} do |f|
+
+  .field
+    = f.label :link_path, class: 'label'
+    br
+    = f.text_field :link_path, placeholder: 'e.g. https://www.sajjadmurtaza.com'
+
+  .field
+    = f.label :title, class: 'label'
+    br
+    = f.text_field :title, placeholder: 'e.g. Sajjad Murtaza'
+
+  .field
+    = f.label :description, class: 'label'
+    br
+    = f.text_area :description, placeholder: 'e.g. Personal WebSite'
+
+  .actions
+    = f.submit

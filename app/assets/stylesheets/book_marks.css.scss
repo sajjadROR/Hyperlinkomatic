@@ -47,7 +47,7 @@
         color: #333;
       }
     }
-    input{
+    input, textarea{
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -110,4 +110,10 @@ p{
     background-color: #ffffff;
     color: #000000;
   }
+}
+
+textarea{
+   border-radius: px;
+   border-bottom-style: outset;
+   border-right-style: outset;
 }
